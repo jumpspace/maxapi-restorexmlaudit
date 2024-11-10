@@ -1,0 +1,15 @@
+=========
+00_INDEX
+=========
+
+This is the index files for the masterFiles folder. This folder is to contain the 'master' XML files extracted from the SQL database. They are to be named as follows:
+* AbEntries_master.xml
+* AbEntryUdfs_master.xml
+* AbEntryNotes_master.xml
+* AbEntryOpps_master.xml
+* AbEntryOppUdfs_master.xml
+* AbEntryOppNotes_master.xm
+* AbEntryCases_master.xml
+* AbEntryCaseUdfs_master.xml
+* AbEntryCaseNotes_master.xml
+
