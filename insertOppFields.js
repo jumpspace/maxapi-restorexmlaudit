@@ -1,5 +1,6 @@
 // insertOppFields.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-insertion: Opp UDFs");
 
@@ -69,7 +70,7 @@ function parseField(filename) {
 }
 
 function getRecord(oppField) {
-    let token = "";
+    // let token = "";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
     let baseurl = "https://api.maximizer.com/octopus";
     let request = {
@@ -114,7 +115,7 @@ function getRecord(oppField) {
 }
 
 function getUdfFromOppEntry(oppField, parentKey) {
-    let token = "";
+    // let token = "";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
 	let baseurl = "https://api.maximizer.com/octopus";
     let oppEntryUdfRead = `${baseurl}/Read`;
@@ -201,7 +202,7 @@ function checkUdfType(oppField, parentKey, udfType, isMulti) {
 }
 
 function getCurrentMultiselectUdfState(oppField, key) {
-	let token = "";
+	// let token = "";
     let udfId = "/Opportunity/Udf/$TYPEID(" + oppField.typeId + ")";
     let baseurl = "https://api.maximizer.com/octopus";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -254,7 +255,7 @@ function getCurrentMultiselectUdfState(oppField, key) {
 }
 
 function updateFields(oppField, requestType) {
-	let token = "";
+	// let token = "";
     let baseurl = "https://api.maximizer.com/octopus";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
     let oppUpdate = `${baseurl}/Update`;

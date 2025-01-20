@@ -1,10 +1,11 @@
 // insertOpps.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-insertion: Opportunity");
 
 // Update token to the PAT of the target database
-const token = "";
+// const token = "";
 
 console.log("Re-insertion: Oportunities");
 

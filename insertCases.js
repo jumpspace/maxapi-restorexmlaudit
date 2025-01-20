@@ -1,5 +1,6 @@
 // insertCase.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-Insertion: Cases");
 
@@ -174,7 +175,7 @@ function parseCase(filename) {
 
 function findAbEntry(filename, userKey, csCase) {
 	console.log("Searching for existing entry. . .");
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let abFind = `${baseurl}/Read`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -231,7 +232,7 @@ function findAbEntry(filename, userKey, csCase) {
 
 function createCase(parentKey, csCase) {
 	console.log("Creating CS case entry. . ." + csCase.caseId);
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let caseCreate = `${baseurl}/Create`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -300,7 +301,7 @@ function updateCaseFields(userKey, csCase) {
 
 function findUser(userId) {
 	console.log("Searching for user. . .");
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let userFind = `${baseurl}/Read`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };

@@ -1,5 +1,6 @@
 // insertNotes.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-insertion: Opp Notes");
 
@@ -82,7 +83,7 @@ function parseOppNote(filename) {
 }
 
 function getRecord(filename, userKey, note) {
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let oppFind = `${baseurl}/Read`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -127,7 +128,7 @@ function getRecord(filename, userKey, note) {
 }
 
 function createNote(parentKey, note) {
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let noteCreate = `${baseurl}/Create`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -170,7 +171,7 @@ function updateNoteFields(userKey, note) {
 
 function findUser(userId) {
 	console.log("Searching for user. . .");
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let userFind = `${baseurl}/Read`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };

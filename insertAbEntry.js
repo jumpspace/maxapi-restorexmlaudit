@@ -1,5 +1,6 @@
 // insertAbEntry.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-insertion: AbEntry");
 
@@ -161,7 +162,7 @@ function parseAbEntry(filename) {
 
 function findAbEntry(abEntry) {
 	console.log("Searching for existing entry. . .");
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let abFind = `${baseurl}/Read`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -213,7 +214,7 @@ function findAbEntry(abEntry) {
 
 function createAbEntry(abEntry, primaryRecKey) {
 	console.log("Creating new entry. . .");
-    let token = "";
+    // let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
     let abUpdate = `${baseurl}/Create`;
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };

@@ -1,5 +1,6 @@
 // insertCaseFields.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-insertion: Case UDFs");
 
@@ -69,7 +70,7 @@ function parseField(filename) {
 }
 
 function getRecord(caseField) {
-    let token = "";
+    // let token = "";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
     let baseurl = "https://api.maximizer.com/octopus";
     let request = {
@@ -117,7 +118,7 @@ function getRecord(caseField) {
 }
 
 function getUdfFromCaseEntry(caseField, parentKey) {
-    let token = "";
+    // let token = "";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
 	let baseurl = "https://api.maximizer.com/octopus";
     let caseEntryUdfRead = `${baseurl}/Read`;
@@ -204,7 +205,7 @@ function checkUdfType(caseField, parentKey, udfType, isMulti) {
 }
 
 function getCurrentMultiselectUdfState(caseField, key) {
-	let token = "";
+	// let token = "";
     let udfId = "/Case/Udf/$TYPEID(" + caseField.typeId + ")";
     let baseurl = "https://api.maximizer.com/octopus";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
@@ -257,7 +258,7 @@ function getCurrentMultiselectUdfState(caseField, key) {
 }
 
 function updateFields(caseField, requestType) {
-	let token = "";
+	// let token = "";
     let baseurl = "https://api.maximizer.com/octopus";
     let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
     let caseUpdate = `${baseurl}/Update`;

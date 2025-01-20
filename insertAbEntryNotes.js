@@ -1,5 +1,6 @@
 // insertAbEntryNotes.js
 const fs = require('fs');
+const token = require('./token');
 
 console.log("Re-insertion: Notes");
 
@@ -136,24 +137,24 @@ function getRecord(filename, note) {
 }
 
 function createNote(parentKey, note) {
-	let token = "";
+	// let token = "";
 	let baseurl = "https://api.maximizer.com/octopus";
 	let noteCreate = `${baseurl}/Create`;
 	let connectHeaders = { "Content-type": "application/json; charset=UTF-8", "Authorization": "Bearer " + token };
 	let request = {
 		"Note": {
 			"Data": {
-				"Key": null;
-				"Text": note.textCol;
-				"RichText": ;
-				"Category": ;
-				"Important": ;
-				"Type": ;
-				"DateTime": ;
-				"Creator": ;
-				"DisplayValue": ;
-				"ParentKey": parentKey;
-				"SecAccess/Write": ;
+				"Key": null,
+				"Text": note.textCol,
+				"RichText": ,
+				"Category": ,
+				"Important": ,
+				"Type": ,
+				"DateTime": ,
+				"Creator": ,
+				"DisplayValue": ,
+				"ParentKey": parentKey,
+				"SecAccess/Write": ,
 			}
 		}
 	};
